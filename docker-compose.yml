@@ -1,0 +1,22 @@
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /var/www/html
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "8000:80"
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: mariadb:latest
+    env_file:
+      - dcompose.env
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mariadb.docker-data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
