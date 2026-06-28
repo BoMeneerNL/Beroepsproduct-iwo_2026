@@ -1,0 +1,36 @@
+.product-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin:1em;
+}
+.product-table th, .product-table td {
+    border: 1px solid lightgray;
+    padding: 8px;
+    text-align: center;
+}
+.product-table th {
+    background-color: #f2f2f2;
+}
+.product-table img{
+  width: 100px;
+  height: 100px;
+}
+.product-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.product-cell img {
+  margin: 0;
+}
+
+
+.klantenlijst-tabel ul{
+  list-style-type: none;
+}
+.klantenlijst-tabel th, .klantenlijst-tabel td {
+  border: 1px solid lightgray;
+    padding: 8px;
+    text-align: center;
+}
