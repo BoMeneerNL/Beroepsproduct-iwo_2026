@@ -1,0 +1,14 @@
+<div class="menuitem">
+  <div class="menuitem-productimg">
+    <img src="{{productImageURL}}" alt="Product image of {{productName}}" />
+  </div>
+  <div class="menuitem-productinfo">
+    <h3>{{productName}}</h3>
+    <p>€{{productPrice}} (p.s.)</p>
+    <p>ingrediënten: {{productIngredients}}</p>
+    <form action="/api/addToCart">
+      <input name="amount" type="number" min="1"  value="1"/>
+      <input hidden name="itemid" value="{{productName}}"/><button class="add-to-cart">Aan winkelwagen toevoegen</button>
+    </form>
+  </div>
+</div>
